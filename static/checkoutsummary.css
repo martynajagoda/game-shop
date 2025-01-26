@@ -1,0 +1,141 @@
+/* Ogólny styl strony */
+body {
+    background-color: #121212; /* Ciemne tło */
+    color: #e0e0e0; /* Jasny tekst */
+    font-family: 'Arial', sans-serif; /* Minimalistyczny font */
+    margin-top: 10px;
+    padding: 0;
+}
+
+/* Nagłówek */
+h1 {
+    color: #ffffff;
+    text-align: center;
+    margin: 20px 0;
+}
+
+h3, h4 {
+    color: #ffffff;
+    margin: 10px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Wyśrodkowanie elementów listy */
+    justify-content: center;
+}
+
+/* Lista produktów w koszyku */
+ul {
+    list-style-type: none;
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Wyśrodkowanie elementów listy */
+    justify-content: center;
+}
+
+li {
+    background-color: #333;
+    padding: 8px;
+    margin: 5px 0;
+    border-radius: 5px;
+    width: 100%; /* Dopasowanie szerokości do kontenera */
+    max-width: 400px; /* Maksymalna szerokość elementów listy */
+    text-align: center; /* Wyśrodkowanie tekstu w każdym elemencie */
+}
+
+/* Przycisk powrotu do sklepu */
+.btn-secondary {
+    background-color: #6c757d;
+    border: none;
+    color: #ffffff;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: block;
+    margin: 20px auto;
+    transition: background-color 0.3s;
+    width: 160px; /* Ustawienie szerokości na 200px */
+    text-align: center; /* Dodane wyśrodkowanie tekstu */
+}
+
+.btn-secondary:hover {
+    background-color: rgb(70, 76, 80);
+}
+
+/* Styl kontenera */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Przyciski i ich stany */
+.btn-primary {
+    background-color: #d3159a;
+    border: none;
+    color: #ffffff;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s;
+    width: 200px;
+    text-align: center;
+}
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.btn-primary:hover {
+    background-color: #a0107b;
+}
+
+/* Style dla elementów formularza */
+form {
+    margin-top: 20px;
+    max-width: 600px; /* Ustawiamy maksymalną szerokość formularza */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Styl nagłówków i danych kontaktowych */
+h4 {
+    color: #ffffff;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.mt-3 {
+    margin-top: 30px;
+}
+
+/* Responsywność */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    .btn-primary, .btn-secondary {
+        width: 100%; /* Zmiana szerokości przycisków na pełną szerokość przy mniejszych ekranach */
+    }
+
+    ul {
+        align-items: flex-start; /* Listy bardziej elastyczne na małych ekranach */
+    }
+}
+.logo {
+    width: 300px;
+    height: auto;
+    margin-bottom: 30px; /* Odstęp od reszty treści */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}

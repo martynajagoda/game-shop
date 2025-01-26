@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Podsumowanie zamówienia</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='checkoutsummary.css') }}">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1>Podsumowanie zamówienia</h1>
+
+        <!-- Lista produktów w koszyku -->
+        <h3>Zakupione produkty:</h3>
+        <ul>
+            {% for product in products %}
+            <li>{{ product }}</li>
+            {% endfor %}
+        </ul>
+
+        <!-- Łączna cena zamówienia -->
+        <h4>Łączna cena: {{ total_price }} zł</h4>
+
+        <!-- Dane kontaktowe i adres -->
+        <h4>Dane kupującego:</h4>
+        <div class="contact-info">
+            <p>Email: {{ email }}</p>
+        <p>Imię i nazwisko: {{ shipping_address }}</p>
+        </div>
+        <img src="{{ url_for('static', filename='styles/images/logo.jpg') }}" class="logo" />
+        <h1>Dziękujemy za zakup w naszym sklepie!</h1>
+        <!-- Przycisk powrotu do sklepu -->
+        <a href="{{ url_for('index') }}" class="btn btn-secondary mt-3">Powrót do sklepu</a>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

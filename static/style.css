@@ -1,0 +1,195 @@
+/* Ogólny styl strony */
+body {
+    background-color: #121212; /* Ciemne tło */
+    color: #e0e0e0; /* Jasny tekst */
+    font-family: 'Arial', sans-serif; /* Minimalistyczny font */
+    margin: 0;
+    padding: 0;
+}
+
+/* Nagłówek */
+h1 {
+    color: #ffffff;
+    text-align: center;
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Przycisk koszyka */
+h1 a.btn {
+    background-color: #d3159a;
+    border: none;
+    color: #ffffff;
+    padding: 10px 15px;
+    font-size: 16px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    margin-left: 40%;
+}
+
+h1 a.btn:hover {
+    background-color: #991070;
+}
+
+/* Flash messages */
+.alert {
+    background-color: #d3159a;
+    color: #ffffff;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Karty produktów */
+/* Karty produktów */
+.card {
+    background-color: #1f1f1f; /* Ciemne tło dla kart */
+    border: 1px solid #333; /* Subtelna ramka */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: 100%; /* Karta zajmuje całą kolumnę */
+    max-width: 300px; /* Maksymalna szerokość karty */
+    margin: 0 auto; /* Centrowanie karty */
+    height: 340px;
+    display: flex;
+    flex-direction: column; /* Układ pionowy */
+    justify-content: space-between; /* Rozdziela elementy pionowo */
+    align-items: center; /* Centrowanie poziome */
+}
+
+/* Obrazki produktów */
+.card-img-top {
+    border-radius: 10px 10px 0 0;
+    height: 150px; /* Stała wysokość obrazka */
+    width: 100%; /* Szerokość obrazka */
+    object-fit: cover; /* Przycięcie obrazka */
+}
+
+/* Sekcja treści w karcie */
+.card-body {
+    display: flex;
+    flex-direction: column; /* Układ pionowy */
+    align-items: center; /* Wyśrodkowanie poziome */
+    justify-content: center; /* Wyśrodkowanie pionowe */
+    text-align: center; /* Wyśrodkowanie tekstów */
+}
+
+/* Tytuły kart */
+.card-title {
+    font-size: 18px;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+/* Tekst w kartach */
+.card-text {
+    font-size: 14px;
+    color: #b0bec5;
+    margin-bottom: 15px; /* Odstęp od przycisku */
+}
+
+/* Przycisk "Dodaj do koszyka" */
+.card .btn {
+    background-color: #d3159a;
+    border: none;
+    color: #ffffff;
+    padding: 10px 15px;
+    font-size: 14px;
+    text-transform: uppercase;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    text-decoration: none;
+    display: block; /* Wyświetlanie jako blok dla większej kontroli */
+    width: fit-content; /* Dopasowanie szerokości do treści *//* Dodany margines pod przyciskiem */
+}
+
+
+/* Hover efekt dla przycisku */
+.card .btn:hover {
+    background-color: #a0107b;
+}
+
+
+/* Styl kontenera */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Rzędy i kolumny */
+.row {
+    display: flex; /* Flexbox na rzędy */
+    flex-wrap: wrap; /* Umożliwia zawijanie elementów */
+    justify-content: space-around; /* Równomierne rozmieszczenie elementów */
+    margin-top: 20px;
+    gap: 20px; /* Odstępy między kolumnami */
+}
+
+.col-md-4 {
+    flex: 0 1 calc(33.333% - 20px); /* Trzy kolumny z odstępami */
+    display: flex;
+    justify-content: center;
+}
+.form-inline {
+    display: flex; /* Flexbox na formularz */
+    justify-content: center; /* Wyśrodkowanie formularza */
+    align-items: center; /* Wyśrodkowanie elementów w pionie */
+    margin-bottom: 20px; /* Odstęp na dole formularza */
+}
+
+.form-control {
+    background-color: #2c2c2c; /* Ciemne tło dla inputa */
+    color: #e0e0e0; /* Jasny tekst */
+    border: 1px solid #444; /* Subtelna ramka */
+    border-radius: 5px;
+    padding: 10px;
+    margin-right: 10px; /* Odstęp między inputem a przyciskiem */
+    width: 300px; /* Szerokość inputa */
+    font-size: 16px;
+}
+
+.btn-primary {
+    background-color: #d3159a;
+    border: none;
+    color: #ffffff;
+    padding: 10px 15px;
+    font-size: 16px;
+    text-transform: uppercase;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+/* Hover efekt dla przycisku wyszukiwania */
+.btn-primary:hover {
+    background-color: #991070;
+}
+
+.logo {
+    height: 50px;  /* Dostosuj wysokość logo */
+    margin-left: 10px;  /* Odstęp od napisu */
+    vertical-align: middle;  
+    margin-right: 10px;
+}
+footer {
+    background-color: #1f1f1f; /* Ciemne tło stopki */
+    color: #b0bec5; /* Jasny tekst w stopce */
+    padding: 20px 0;
+    text-align: center;
+    font-size: 14px;
+    margin-top: 40px;
+}
+
+footer a {
+    color: #d3159a; /* Kolor linków w stopce */
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>More Games</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+
+    <script>
+        // Skrypt do ukrycia komunikatu po 2 sekundach
+        window.onload = function() {
+            setTimeout(function() {
+                const alertMessage = document.querySelector('.alert');
+                if (alertMessage) {
+                    alertMessage.style.display = 'none';
+                }
+            }, 2000);  // 2000 milisekund = 2 sekundy
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        
+        <h1>
+            <img src="{{ url_for('static', filename='styles/images/logo.jpg') }}" class="logo" />
+            More Games
+            <a href="/cart" class="btn btn-primary float-end">Przejdź do koszyka</a>
+        </h1>
+        <form action="/" method="GET" class="form-inline mb-4">
+            <input type="text" name="search" class="form-control" placeholder="Szukaj gry..." value="{{ request.args.get('search') }}">
+            <button type="submit" class="btn btn-primary">Szukaj</button>
+        </form>
+        
+        <!-- Sekcja komunikatów flash -->
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <div class="alert alert-success mt-4">
+                    {% for message in messages %}
+                        <p>{{ message }}</p>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        {% endwith %}
+
+        <div class="row mt-4">
+            {% for product in products %}
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img src="{{ url_for('static', filename='styles/images/' + product[0]|string + '.jpg') }}" 
+                         class="card-img-top img-fluid" 
+                         alt="{{ product[1] }}" 
+                         style="object-fit: cover; height: 200px; width: 100%;">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ product[1] }}</h5>
+                        <p class="card-text">Cena: {{ product[2] }} zł</p>
+                        <a href="/add_to_cart/{{ product[0] }}" class="btn btn-success">Dodaj do koszyka</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        
+      
+    </div>
+    <footer>
+        <p>&copy; 2025 More Games - Wszystkie prawa zastrzeżone</p>
+        <p>Strona stworzona przez Martynę i Rafaello. Kontakt: <a href="mailto:kontakt@moregames.com">kontakt@moregames.com</a></p>
+    </footer>
+</body>
+</html>
